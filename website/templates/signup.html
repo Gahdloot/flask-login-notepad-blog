@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% block title %} Home {% endblock %}
+
+{% block content %} This is the Sign-up page
+<form method="POST">
+    <h3 align="center">Sign Up</h3>
+    <div class="form-group">
+        <label for="email"> Email Adress</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+        <label for="firstname"> firstname</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="firstname">
+    </div>
+    <div class="form-group">
+        <label for="password"> Password Adress</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="ENter password">
+    </div>
+    <div class="form-group">
+        <label for="checkpass"> Password Adress</label>
+        <input type="password" class="form-control" id="checkpass" name="checkpass" placeholder="checpassword">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary"> Sign up</button>
+</form>
+
+{% endblock %}
