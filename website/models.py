@@ -10,6 +10,7 @@ class Note(db.Model):
     data = db.Column(db.String(10000))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     #user_id is a foreign key in Note
+    # one user_id can be assigned to many notes, which makes it a one to many relationship
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class User(db.Model, UserMixin):
